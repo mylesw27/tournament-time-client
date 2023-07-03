@@ -11,7 +11,7 @@ export default function TournamentList(props) {
 
     useEffect(() => {
         setCurrentUser(props.currentUser)
-        axios.get("http://10.0.0.197:8000/api/tournaments/")
+        axios.get("https://tournament-time.herokuapp.com/api/tournaments/")
             .then((response) => {
                 setTournaments(response.data)
             })
