@@ -1,0 +1,58 @@
+.homeBackground {
+    /* background: green; */
+    /* color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../../../public/IMG_3910.jpeg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    height: 300px;
+    width: 300px;
+}
+
+.home {
+    background-image: linear-gradient(to top, rgba(35, 80, 35, 1) 5%, rgba(0,0,0,0),rgba(0,0,0,0));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center ; */
+    align-items: center;
+}
+
+.cardDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.cardDiv a:link { 
+    color: green;
+}
+
+.cardDiv a:visited {
+    color: green;
+}
+
+.homeCardDiv {
+    opacity: .95;
+    /* background-color: rgba(210,210,210,.8); */
+    box-shadow: 1px 1px 5px;
+}
+
+.skip {
+    margin-left: 25px;
+}
+
+.or {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px
+}

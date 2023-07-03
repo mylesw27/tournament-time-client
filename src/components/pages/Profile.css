@@ -1,0 +1,39 @@
+.profileDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.nameDiv {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.pencil {
+    margin-left: 10px;
+    color: gray
+}
+
+.username {
+    width: max-content;
+    
+}
+
+.tournamentHeader {
+    width: 100%;
+    text-align: left;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
