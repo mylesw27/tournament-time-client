@@ -30,16 +30,18 @@ export default function TournamentList(props) {
 
     let tournamentIdArray = []
     const filterTournaments = () => {
-        tournaments.forEach(tournament => {
-            if (tournament.players) {
-                tournament.players.forEach(player => {
-                    if (player.id == currentUser) {
-                        tournamentIdArray.push(tournament)
-                    }
-                })
-            }
-            
-        })
+        if(tournaments) {
+            tournaments.forEach(tournament => {
+                if (tournament.players) {
+                    tournament.players.forEach(player => {
+                        if (player.id == currentUser) {
+                            tournamentIdArray.push(tournament)
+                        }
+                    })
+                }
+                
+            })
+        }
     }
 
     
