@@ -22,14 +22,14 @@ export default function Tournament (props) {
     const [render, setRender] = useState(false)
 
     useEffect (() => {
-        const url = `https://tournament-time.herokuapp.com/api/tournaments/${id}/`
-        axios.get(url)
+        const url = `api/tournaments/${id}/`
+        API.get(url)
             .then((response) => {
                 setTournament(response.data)
                 setPlayers(response.data.players)
                 setScores(response.data.scores)
             })
-        axios.get('https://tournament-time.herokuapp.com/api/players/')
+        API.get('api/players/')
             .then((response) => {
                 setAllPlayers(response.data)
                 setRender(true)

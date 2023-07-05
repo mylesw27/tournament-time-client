@@ -4,6 +4,7 @@ import axios, { all } from "axios";
 import TournamentsCard from "../partials/TournamentsCard";
 import { Button, Form } from "react-bootstrap";
 import './AllTournamentList.css'
+import API from "../../API";
 
 export default function TournamentList(props) {
     const [tournaments, setTournaments] = useState(["",""])
@@ -12,7 +13,7 @@ export default function TournamentList(props) {
 
     useEffect(() => {
         setCurrentUser(props.currentUser)
-        axios.get("https://tournament-time.herokuapp.com/api/tournaments/")
+        API.get("api/tournaments/")
             .then((response) => {
                 setTournaments(response.data)
             })

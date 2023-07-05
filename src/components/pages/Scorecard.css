@@ -11,17 +11,28 @@
     display: flex;
     flex-direction: column;
     margin: 0 px;
+    text-align: center;
+}
+
+.activeHole {
+    border: 1px solid rgb(7, 84, 37);
+    border-radius: 6px;
+    padding: 1px;
+    box-shadow: 0px 0px 5px rgba(7, 84, 37, .5);
+    text-align: center;
 }
 
 .nine {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 45px 5px 45px 5px;
+    margin: 10px 5px 10px 5px;
 }
 
 .nineheader{
     text-align: center;
+    font-size: 15px;
+    display: none;
 }
 
 .buttonDiv {
@@ -36,6 +47,135 @@
 
 }
 
-.scorecardDiv {
-    
+.holeNumberDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.holeHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.holeNumber {
+    display: flex;
+    justify-content: center;
+    font-size: 75px;
+}
+
+.totalScoresDiv {
+    display: flex;
+    flex-direction: row;
+    width: 200 px;
+}
+
+.totalScoresDiv p {
+    font-size: 10px;
+    margin: 5px 20px;
+}
+
+.totalScore {
+    margin: 5px 20px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.currentHoleDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 250px;
+}
+
+.chevron {
+    transform: scaleY(8) scaleX(6);
+    translate: 0px 40px;
+    margin: 0px 0px 60px 0px;
+}
+
+.holeButton {
+    background-color: white;
+    color: rgb(25,135,84);
+    border-color: rgba(25,135,84,0);
+    margin: 3px;
+    width: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.holeButton:focus {
+    background-color: white;
+    color: rgb(25,135,84);
+    border-color: rgba(25,135,84,0);
+}
+.holeButton:active {
+    background-color: white;
+    color: rgb(25,135,84);
+    border-color: rgba(25,135,84,0);
+}
+.holeButton:hover {
+    background-color: white;
+    color: rgb(25,135,84);
+    border-color: rgba(25,135,84,0);
+}
+
+.inactiveButton {
+    color: rgba(25,135,84,.5);
+}
+.inactiveButton:active {
+    color: rgba(25,135,84,.5);
+}
+.inactiveButton:focus {
+    color: rgba(25,135,84,.5);
+}
+.inactiveButton:hover {
+    color: rgba(25,135,84,.5);
+}
+
+.scoreWordDiv{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 0px 0px 0px 0px;
+}
+
+.currentHoleScore {
+    font-size: 100px;
+    transform: scaleY(3) scaleX(2);
+    translate: 0px 40px;
+    color: black;
+    margin: -10px 0px 0px 0px;
+}
+
+.scoreButtonDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    /* margin-top: 30px; */
+}
+
+.scoreButton {
+    height: 80px;
+    width: 80px;
+    font-size: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitButtonsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0px 0px 0px;
+}
+
+.submitButton {
+    width: 200px;
+    height: 50px;
+    z-index: 1;
 }
