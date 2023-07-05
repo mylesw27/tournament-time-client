@@ -16,3 +16,7 @@
     flex-direction: row;
     align-items: baseline;
 }
+
+a:link {
+    color: black;
+}

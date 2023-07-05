@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios, { all } from "axios";
 import TournamentsCard from "../partials/TournamentsCard";
 import { Button } from "react-bootstrap";
+import API from "../../API";
 
 
 export default function TournamentList(props) {
@@ -11,11 +12,13 @@ export default function TournamentList(props) {
 
     useEffect(() => {
         setCurrentUser(props.currentUser)
-        axios.get("api/tournaments/")
+        if (tournaments) {
+            API.get("api/tournaments/")
             .then((response) => {
                 setTournaments(response.data)
             })
-    },[])
+        }
+    },[tournaments])
 
     useEffect(() => {
 
@@ -46,7 +49,6 @@ export default function TournamentList(props) {
 
     
     filterTournaments()
-    console.log(tournamentIdArray)
 
     return (
         <div>

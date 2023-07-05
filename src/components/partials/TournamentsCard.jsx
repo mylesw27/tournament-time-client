@@ -25,8 +25,8 @@ export default function TournamentsCard(props) {
 
 
     return (
-        <Card className="tournamentCard">
-            <Link to={`/tournament/${tournament.id}`}>
+        <Link to={`/tournament/${tournament.id}`}>
+            <Card className="tournamentCard">
                 <CardHeader>
                     <Card.Title>
                     {tournament.name}
@@ -47,7 +47,7 @@ export default function TournamentsCard(props) {
                 </div>
                 </Card.Body>
                 
-            </Link>
-        </Card>
+            </Card>
+        </Link>
     )
 }

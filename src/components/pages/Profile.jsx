@@ -25,6 +25,7 @@ export default function Profile(props) {
             if (currentUser) {
                 const findTournaments = await API.get(`api/tournaments/`)
                 setTournaments(findTournaments.data)
+                console.log(findTournaments.data)
             } 
         }
         getTournaments()
