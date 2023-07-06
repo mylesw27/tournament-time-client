@@ -14,6 +14,7 @@ import TournamentForm from './components/partials/TournamentForm';
 import Scorecard from './components/pages/Scorecard';
 import AllTournamentList from './components/pages/AllTournamentList'
 import EditProfile from './components/pages/EditProfile';
+import ReadScorecard from './components/pages/ReadScorecard';
 
 
 function HeaderWrapper({children, handleLogout, currentUser, userProfile}) {
@@ -111,6 +112,15 @@ function App() {
         element={
           <HeaderWrapper handleLogout={handleLogout} currentUser={currentUser} userProfile={userProfile}>
             <Scorecard currentUser={currentUser} />
+          </HeaderWrapper>
+        }
+      />
+
+      <Route
+        path="/tournament/viewscorecard/:tournamentId/:round/:playerId"
+        element={
+          <HeaderWrapper handleLogout={handleLogout} currentUser={currentUser} userProfile={userProfile}>
+            <ReadScorecard currentUser={currentUser} />
           </HeaderWrapper>
         }
       />

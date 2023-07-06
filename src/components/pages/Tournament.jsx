@@ -223,10 +223,10 @@ export default function Tournament (props) {
                             return (
                                 <tr key={`${id}-${i}`}>
                                     <td>{`${player.first_name} ${player.last_name}`}</td>
-                                    {date1 ? <td className="scoreNumber">{roundScores[0][id]}</td> : null }
-                                    {date2 ? <td className="scoreNumber">{roundScores[1][id]}</td> : null }
-                                    {date3 ? <td className="scoreNumber">{roundScores[2][id]}</td> : null }
-                                    {date4 ? <td className="scoreNumber">{roundScores[3][id]}</td> : null }
+                                    {date1 ? <td className="scoreNumber"><Link to={`/tournament/viewscorecard/${tournament.id}/1/${id}`}>{roundScores[0][id]}</Link></td> : null }
+                                    {date2 ? <td className="scoreNumber"><Link to={`/tournament/viewscorecard/${tournament.id}/2/${id}`}>{roundScores[1][id]}</Link></td> : null }
+                                    {date3 ? <td className="scoreNumber"><Link to={`/tournament/viewscorecard/${tournament.id}/3/${id}`}>{roundScores[2][id]}</Link></td> : null }
+                                    {date4 ? <td className="scoreNumber"><Link to={`/tournament/viewscorecard/${tournament.id}/4/${id}`}>{roundScores[3][id]}</Link></td> : null }
                                     <td>{(roundScores[0][id] ? parseInt(roundScores[0][id]) : 0) + (roundScores[1][id] ? parseInt(roundScores[1][id]) : 0) + (roundScores[2][id] ? parseInt(roundScores[2][id]) : 0) + (roundScores[3][id] ? parseInt(roundScores[3][id]): 0)}
                                     </td>
                                 </tr>
